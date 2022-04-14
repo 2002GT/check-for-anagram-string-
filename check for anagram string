@@ -1,0 +1,27 @@
+long long gcd(long A,long B)
+   {
+           
+       if(B==0)
+       {
+           return A;            
+       }
+       
+       return(gcd(B,A%B));
+   }
+void addFraction(int num1, int den1, int num2,int den2)
+{
+       int l,g;
+          l=(den1*den2)/gcd(den1,den2);
+          
+          num1=num1*(l/den1)+num2*(l/den2);
+          
+          g=gcd(l,num1);
+          
+          cout<<num1/g<<"/"<<l/g<<endl;
+          
+}
+         
+     
+       
+
+ 
